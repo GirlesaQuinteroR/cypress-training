@@ -1,0 +1,28 @@
+{
+  "name": "cypress-training",
+  "version": "1.0.0",
+  "description": "This is a  Worshop about Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GirlesaQuinteroR/cypress-training.git"
+  },
+  "keywords": [
+    "ui-testing",
+    "dojo",
+    "practice",
+    "cypress"
+  ],
+  "author": "Girlesa Quintero Rodriguez girle0708@gmail.com  @GirlesaQuinteroR",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GirlesaQuinteroR/cypress-training/issues"
+  },
+  "homepage": "https://github.com/GirlesaQuinteroR/cypress-training#readme",
+  "devDependencies": {
+    "cypress": "^6.8.0"
+  }
+}
