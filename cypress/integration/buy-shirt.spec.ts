@@ -9,10 +9,17 @@ describe("Buy a t-shirt", () => {
   
       cy.get("#email").type("aperdomobo@gmail.com")
       cy.get("#passwd").type("WorkshopProtractor")
-  
-      // Debes completar la prueba ...
-  
+      cy.get("#SubmitLogin").click()
+      cy.get(".cart_navigation > .button > span").click()
+      cy.get("#cgv").click()
+      cy.get(".button[name='processCarrier']").click()
+      cy.get(".bankwire").click()
+      cy.get(".button[type='submit']").contains("I confirm my order").click()           
       cy.get("#center_column > div > p > strong")
-        .should("have.text", "Your order on My Store is complete.")
+      .should("have.text", "Your order on My Store is complete.")
+      
+      //Logout to won't have problems in the future repeating the test
+      cy.get(".logout[title='Log me out']").click()
+  
     });
   });
