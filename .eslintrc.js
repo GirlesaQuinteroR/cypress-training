@@ -29,4 +29,3 @@ module.exports = {
         "cypress/assertion-before-screenshot": "warn",
         "cypress/no-force": "warn"
     }};
-    

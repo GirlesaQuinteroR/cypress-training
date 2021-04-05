@@ -9,4 +9,3 @@ except:
 - "/^v\\d+\\.\\d+\\.\\d+$/"
 script:
   - npm test
-  
