@@ -1,10 +1,10 @@
-import { MenuContentPage } from "../page/index.js"
-import { ShoppingCartPage } from "../page/index.js"
-import { ShippingCartPage } from "../page/index.js"
-import { LoginPage } from "../page/index.js"
-import { PaymentStep } from "../page/index.js"
-import { AdressStep } from "../page/index.js"
-import { ProductsListPage } from "../page/index.js"
+import { MenuContentPage } from "../page/index"
+import { ShoppingCartPage } from "../page/index"
+import { ShippingCartPage } from "../page/index"
+import { LoginPage } from "../page/index"
+import { PaymentStep } from "../page/index"
+import { AdressStep } from "../page/index"
+import { ProductsListPage } from "../page/index"
 
 const menuContentPage = new MenuContentPage()
 const shoppingCartPage = new ShoppingCartPage()
