@@ -35,4 +35,3 @@ module.exports = (on, config) => {
 
   on('file:preprocessor', wp(options))
 }
-
