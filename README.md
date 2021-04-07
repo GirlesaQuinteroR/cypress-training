@@ -1,1 +1,1 @@
-"# cypress-training" 
+"# cypress-training"

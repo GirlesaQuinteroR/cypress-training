@@ -4,7 +4,10 @@
   "description": "This is a  Worshop about Cypress",
   "main": "index.js",
   "scripts": {
-    "test:open": "cypress open"
+    "test:open": "npm run lint && cypress open",
+    "test": "cypress run",
+    "lint": "eslint ./cypress/integration/**/*.ts",
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,14 @@
   },
   "homepage": "https://github.com/GirlesaQuinteroR/cypress-training#readme",
   "devDependencies": {
-    "cypress": "^6.8.0"
+    "@cypress/webpack-preprocessor": "^5.6.0",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "cypress": "^6.8.0",
+    "eslint": "^7.23.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "ts-loader": "^8.1.0",
+    "typescript": "^4.2.3",
+    "webpack": "^5.30.0"
   }
 }
