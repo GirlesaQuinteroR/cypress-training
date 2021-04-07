@@ -31,7 +31,7 @@ describe("Buy a t-shirt", () => {
     paymentStep.confirmTheOrder()
     paymentStep.confirmationPaymentMessage()
     paymentStep.signOutFromPaymentStep()
-    
-    
+
+
   });
 });
