@@ -4,7 +4,7 @@ class PaymentStep {
     private confirmOrder: string
     private signOutAfterPayment: string
     private confirmationMessage: string
-    
+
     constructor() {
         this.paymentMethod = ".bankwire"
         this.confirmOrder = ".button[type='submit']"
@@ -18,11 +18,11 @@ class PaymentStep {
     }
 
     public confirmTheOrder(): void {
-        cy.get(this.confirmOrder).contains("I confirm my order").click()  
+        cy.get(this.confirmOrder).contains("I confirm my order").click()
     }
 
     public confirmationPaymentMessage(): void {
-        cy.get(this.confirmationMessage).should("have.text", "Your order on My Store is complete.")
+        cy.get(this.confirmationMessage).contains("Your order on My Store is complete.")
     }
 
     public signOutFromPaymentStep(): void {

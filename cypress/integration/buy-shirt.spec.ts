@@ -21,6 +21,7 @@ describe("Buy a t-shirt", () => {
     productsListPage.goToTShirtMenu()
     productsListPage.checkoutItemsInTheCar()
     shoppingCartPage.goToPayment()
+    shoppingCartPage.goToPayment()
     loginPage.typeUser()
     loginPage.typePassword()
     loginPage.submitLoginCredentials()

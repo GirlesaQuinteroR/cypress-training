@@ -7,7 +7,7 @@ class ShoppingCartPage {
     }
 
     public goToPayment(): void {
-        cy.get(this.proceedToCheckout).click()
+        cy.get(this.proceedToCheckout).click({multiple: true, force: true})
     }
 }
 export { ShoppingCartPage }
