@@ -18,19 +18,19 @@ describe("Buy a t-shirt", () => {
 
   it("then should be bought a t-shirt", () => {
     menuContentPage.visitMenuContentPage()
-    productsListPage.goToTShirtMenu()
+    menuContentPage.goToTShirtMenu()
+    menuContentPage.AddToCart()
     productsListPage.checkoutItemsInTheCar()
     shoppingCartPage.goToPayment()
-    shoppingCartPage.goToPayment()
-    loginPage.typeUser()
-    loginPage.typePassword()
+    loginPage.typeUser("aperdomobo@gmail.com")
+    loginPage.typePassword("WorkshopProtractor")
     loginPage.submitLoginCredentials()
     adressStep.confirmAdresses()
     shippingCartStep.termsAndConditionsBox()
     shippingCartStep.processCarrier()
     paymentStep.selectPaymentMethod()
     paymentStep.confirmTheOrder()
-    paymentStep.confirmationPaymentMessage()
+    paymentStep.validateConfirmationPaymentMessage("Your order on My Store is complete.")
     paymentStep.signOutFromPaymentStep()
 
 

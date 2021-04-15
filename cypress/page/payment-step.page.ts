@@ -21,8 +21,8 @@ class PaymentStep {
         cy.get(this.confirmOrder).contains("I confirm my order").click()
     }
 
-    public confirmationPaymentMessage(): void {
-        cy.get(this.confirmationMessage).contains("Your order on My Store is complete.")
+    public validateConfirmationPaymentMessage(msg: string): void {
+        cy.get(this.confirmationMessage).contains(msg)
     }
 
     public signOutFromPaymentStep(): void {

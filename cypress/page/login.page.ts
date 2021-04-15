@@ -10,11 +10,11 @@ class LoginPage {
         this.signInBtn = "#SubmitLogin"
     }
 
-    public typeUser(): void {
-        cy.get(this.email).type("aperdomobo@gmail.com")
+    public typeUser(user : string): void {
+        cy.get(this.email).type(user)
     }
-    public typePassword(): void {
-        cy.get(this.password).type("WorkshopProtractor")
+    public typePassword(psw : string): void {
+        cy.get(this.password).type(psw)
     }
     public submitLoginCredentials(): void {
         cy.get(this.signInBtn).click()
