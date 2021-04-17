@@ -15,7 +15,6 @@ class DressesListPage {
     }
 
     getDressProducts(){
-      console.log(cy.get(this.dressItem))
       return cy.get(this.dressItem)
     }
 
