@@ -6,31 +6,47 @@ import { PaymentStep } from "../page/index"
 import { AdressStep } from "../page/index"
 import { ProductsListPage } from "../page/index"
 
-const menuContentPage = new MenuContentPage()
-const shoppingCartPage = new ShoppingCartPage()
-const shippingCartStep = new ShippingCartPage()
-const loginPage = new LoginPage()
-const paymentStep = new PaymentStep()
-const adressStep = new AdressStep()
-const productsListPage = new ProductsListPage()
-
 describe("Buy a t-shirt", () => {
+  let menuContentPage: MenuContentPage;
+  let shoppingCartPage: ShoppingCartPage;
+  let shippingCartStep: ShippingCartPage;
+  let loginPage: LoginPage;
+  let paymentStep: PaymentStep;
+  let adressStep: AdressStep;
+  let productsListPage: ProductsListPage;
+  let expectedMessage: string;
+  let email: string;
+  let password: string;
+
+  before(() => {
+    menuContentPage = new MenuContentPage()
+    shoppingCartPage = new ShoppingCartPage()
+    shippingCartStep = new ShippingCartPage()
+    loginPage = new LoginPage()
+    paymentStep = new PaymentStep()
+    adressStep = new AdressStep()
+    productsListPage = new ProductsListPage()
+    expectedMessage = "Your order on My Store is complete.";
+    email = "aperdomobo@gmail.com"
+    password = "WorkshopProtractor"
+  })
 
   it("then should be bought a t-shirt", () => {
+
     menuContentPage.visitMenuContentPage()
     menuContentPage.goToTShirtMenu()
     menuContentPage.AddToCart()
     productsListPage.checkoutItemsInTheCar()
     shoppingCartPage.goToPayment()
-    loginPage.typeUser("aperdomobo@gmail.com")
-    loginPage.typePassword("WorkshopProtractor")
+    loginPage.typeUser(email)
+    loginPage.typePassword(password)
     loginPage.submitLoginCredentials()
     adressStep.confirmAdresses()
     shippingCartStep.termsAndConditionsBox()
     shippingCartStep.processCarrier()
     paymentStep.selectPaymentMethod()
     paymentStep.confirmTheOrder()
-    paymentStep.validateConfirmationPaymentMessage("Your order on My Store is complete.")
+    paymentStep.validateConfirmationPaymentMessage(expectedMessage)
     paymentStep.signOutFromPaymentStep()
 
 
