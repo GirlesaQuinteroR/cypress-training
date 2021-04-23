@@ -6,8 +6,6 @@ import { PaymentStep } from "../page/index"
 import { AdressStep } from "../page/index"
 import { ProductsListPage } from "../page/index"
 
-
-
 describe("Buy a t-shirt", () => {
   let menuContentPage: MenuContentPage;
   let shoppingCartPage: ShoppingCartPage;
